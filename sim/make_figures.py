@@ -35,7 +35,7 @@ CTL_STYLE = {
     "NoSensLyap": {"color": "#2ca02c", "marker": "^", "label": "No-Sens Lyap."},
     "SensLyap":   {"color": "#9467bd", "marker": "D", "label": "Sens. Lyap."},
     "DRCVaRLyap": {"color": "#d62728", "marker": "*", "label": "GreenSense (ours)"},
-    "OracleDP":   {"color": "#7f7f7f", "marker": "x", "label": "Oracle DP (LB)"},
+    "OracleDP":   {"color": "#7f7f7f", "marker": "x", "label": "Clairvoyant"},
 }
 
 RESULTS_DIR = "sim/results"

@@ -314,7 +314,7 @@ def make_table_main_real(main_real: Dict, out_path: str) -> None:
         "NoSensLyap": "No-Sens Lyap.",
         "SensLyap": "Sens. Lyap.",
         "DRCVaRLyap": r"\textbf{GreenSense}",
-        "OracleDP": "Oracle DP (LB)",
+        "OracleDP": "Clairvoyant",
     }
     rows = []
     for ctl in CONTROLLERS_MAIN:
@@ -374,7 +374,7 @@ def make_table_day_compare(main_mon: Dict, main_fri: Dict,
               "NoSensLyap": "No-Sens Lyap.",
               "SensLyap": "Sens. Lyap.",
               "DRCVaRLyap": r"\textbf{GreenSense}",
-              "OracleDP": "Oracle DP"}
+              "OracleDP": "Clairvoyant"}
     ctls = ["AlwaysOn", "Threshold", "NoSensLyap", "DRCVaRLyap", "OracleDP"]
     rows = []
     for ctl in ctls:
@@ -417,7 +417,7 @@ def make_table_data_compare(synth: Dict, milan_only: Dict,
               "NoSensLyap": "No-Sens Lyap.",
               "SensLyap": "Sens. Lyap.",
               "DRCVaRLyap": "GreenSense",
-              "OracleDP": "Oracle DP"}
+              "OracleDP": "Clairvoyant"}
     ctls = ["Threshold", "NoSensLyap", "DRCVaRLyap", "OracleDP"]
     rows = []
     for ctl in ctls:
@@ -473,7 +473,7 @@ CTL_STYLE = {
     "NoSensLyap": {"color": "#2ca02c", "marker": "^", "label": "No-Sens Lyap."},
     "SensLyap":   {"color": "#9467bd", "marker": "D", "label": "Sens. Lyap."},
     "DRCVaRLyap": {"color": "#d62728", "marker": "*", "label": "GreenSense"},
-    "OracleDP":   {"color": "#7f7f7f", "marker": "x", "label": "Oracle DP"},
+    "OracleDP":   {"color": "#7f7f7f", "marker": "x", "label": "Clairvoyant"},
 }
 
 
@@ -591,7 +591,7 @@ def fig_data_compare(synth: Dict, milan_only: Dict, geo_only: Dict,
                      real: Dict, out_path: str) -> None:
     plt = _setup_mpl()
     ctls = ["Threshold", "NoSensLyap", "DRCVaRLyap", "OracleDP"]
-    labels = ["Threshold", "NoSensLyap", "GreenSense", "OracleDP"]
+    labels = ["Threshold", "NoSensLyap", "GreenSense", "Clairvoyant"]
     sources = [("Synth.", synth, "#7f7f7f"),
                ("Milan+synthMob", milan_only, "#1f77b4"),
                ("Synth+Geolife", geo_only, "#2ca02c"),
@@ -721,7 +721,7 @@ def fig_milan_day_compare(main_mon: Dict, main_fri: Dict,
     """Bar plot: Mon vs Fri on 4 key controllers, energy + CVaR side by side."""
     plt = _setup_mpl()
     ctls = ["Threshold", "NoSensLyap", "DRCVaRLyap", "OracleDP"]
-    labels = ["Threshold", "NoSensLyap", "GreenSense", "OracleDP"]
+    labels = ["Threshold", "NoSensLyap", "GreenSense", "Clairvoyant"]
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.0, 2.7))
     x = np.arange(len(ctls))
     width = 0.38
