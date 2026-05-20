@@ -1,0 +1,57 @@
+# Paper source (kept private; only released after publication)
+main.tex
+main_2col.tex
+main*.pdf
+main*.aux
+main*.log
+main*.out
+main*.bbl
+main*.blg
+main*.synctex.gz
+main*.fls
+main*.fdb_latexmk
+main*.toc
+
+# Claude / project metadata
+CLAUDE.md
+PROJECT_STATUS.md
+reference_verification.txt
+*.jsonl
+
+# Datasets (large, license-controlled — see README for sources)
+sim/data/milan_*.txt
+sim/data/geolife/
+sim/data/geolife_cache.npz
+sim/data/*.npz
+
+# Intermediate experiment artifacts (regeneratable)
+sim/results/raw_*.json
+sim/results/run.log
+sim/results/run_*.log
+sim/results/*.log
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# LaTeX build artifacts (anywhere)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
